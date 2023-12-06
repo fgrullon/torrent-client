@@ -1,7 +1,11 @@
 "use strict";
 
-const fs = require("fs");
+import fs from "fs";
+import bencode from "bencode";
 
-const torrent = fs.readFileSync("puppy.torrent");
+/*
+ *  Read torrent file from local storage and pass it to the decode function of bencode library
+ */
+const torrent = bencode.decode(fs.readFileSync("puppy.torrent"));
 
-console.log(torrent.toString("utf8"));
+console.log(torrent.announce.toString("utf8"));
