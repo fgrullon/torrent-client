@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bencode": "^4.0.0",
+    "uint8-util": "^2.2.4",
     "url-parse": "^1.5.10"
   }
 }
